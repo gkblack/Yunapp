@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sssoft.Yundian"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.ConsumptionActivity"
+            android:label="@string/title_activity_consumption" >
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SigninActivity"
+            android:label="@string/title_activity_signin" >
+        </activity>
+        <activity
+            android:name=".activity.ForgetActivity"
+            android:label="@string/title_activity_forget" >
+        </activity>
+        <activity
+            android:name=".activity.AddtypeActivity"
+            android:label="@string/title_activity_addtype" >
+        </activity>
+        <activity
+            android:name=".activity.AddunitsActivity"
+            android:label="@string/title_activity_addunits" >
+        </activity>
+        <activity
+            android:name=".activity.AddAndEditGoodsActivity"
+            android:label="@string/title_activity_add_goods" >
+        </activity>
+        <activity
+            android:name=".activity.MyIncomeActivity"
+            android:label="@string/title_activity_my_income" >
+        </activity>
+        <activity
+            android:name=".activity.OrdersDetailsActivity"
+            android:label="@string/title_activity_orders_details" >
+        </activity>
+        <activity
+            android:name=".activity.ManageGoodsActivity"
+            android:label="@string/title_activity_managegoods" >
+        </activity>
+        <activity
+            android:name="com.sssoft.Yundian.activity.PendingOrderActivity"
+            android:label="@string/title_activity_pending_order" >
+        </activity>
+                <activity
+            android:name="com.sssoft.Yundian.activity.SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/p"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 标题 -->
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFA500"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_Menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back"
+            android:onClick="toback" >
+        </Button>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="添加商品"
+            android:textColor="#FFF"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:src="@drawable/shopping" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="上传商品图片" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        style="@style/LinearLayoutStyle"
+        android:layout_weight="1" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="商品名称"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_goodname"
+            style="@style/EditTextStyle"
+            android:hint="请输入商品名称"
+            android:maxLength="8" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_3"
+        style="@style/LinearLayoutStyle"
+        android:layout_weight="1" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="选择分类"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/bt_add1"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_toRightOf="@+id/spinnerKindStatic"
+            android:text="新增分类"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_4"
+        style="@style/LinearLayoutStyle"
+        android:layout_weight="1" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="商品规格"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_goodspecification"
+            style="@style/EditTextStyle"
+            android:hint="请输入商品规格"
+            android:maxLength="8"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_5"
+        style="@style/LinearLayoutStyle"
+        android:layout_weight="1" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="选择单位"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/unit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/bt_add2"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_toRightOf="@+id/spinnerKindStatic"
+            android:text="新增单位"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_6"
+        style="@style/LinearLayoutStyle"
+        android:layout_weight="1" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="零售价"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_goodvalue"
+            style="@style/EditTextStyle"
+            android:hint="0.00"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_7"
+        style="@style/LinearLayoutStyle"
+        android:layout_weight="1" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="商品库存"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_goodnumber"
+            style="@style/EditTextStyle"
+            android:hint="0"
+            android:inputType="number"
+            android:maxLength="6" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_9"
+        style="@style/LinearLayoutStyle"
+        android:layout_weight="3"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_goods_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="备注"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_goodnote"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="2"
+            android:background="@null"
+            android:gravity="left"
+            android:hint="180字以内"
+            android:maxLength="180"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/ButtonStyle"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape"
+        android:text="保存" />
+
+</LinearLayout>

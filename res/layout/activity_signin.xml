@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 注册页 -->
+
+
+    <!-- 顶栏 -->
+
+    <RelativeLayout
+        android:id="@+id/Top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/top_bg"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/tv_line"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:background="@drawable/ic_vertical_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="注册"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Top"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/UI_spacing40"
+        android:layout_marginRight="@dimen/UI_spacing40"
+        android:layout_marginTop="@dimen/UI_spacing40"
+        android:orientation="vertical" >
+
+        <!-- 填写手机号 -->
+
+        <com.sssoft.Yundian.view.ClearEditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/UI_spacing20"
+            android:drawableLeft="@drawable/phone"
+            android:drawablePadding="@dimen/UI_spacing10"
+            android:hint="@string/input_phone"
+            android:maxLength="11"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:textColor="@color/UI_text_black" />
+
+        <!-- 验证码 -->
+
+        <LinearLayout
+            android:id="@+id/LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_phone_number"
+            android:layout_marginTop="@dimen/UI_spacing5"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_verify_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:drawableLeft="@drawable/ic_message_code"
+                android:drawablePadding="@dimen/UI_spacing10"
+                android:hint="@string/input_verify_code"
+                android:inputType="textPassword"
+                android:maxLength="6"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/tv_verify_code"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/UI_spacing40"
+                android:background="@drawable/btn_background"
+                android:layout_marginLeft="@dimen/UI_spacing10"
+                android:layout_marginRight="@dimen/UI_spacing5"
+                android:text="@string/verify_code"
+                android:textSize="@dimen/UI_text_middle"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- 输入6~16位密码 -->
+
+        <com.sssoft.Yundian.view.ClearEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/UI_spacing5"      
+            android:drawableLeft="@drawable/pwd"
+            android:drawablePadding="@dimen/UI_spacing10"
+            android:hint="@string/input_password"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:singleLine="true" />
+
+        <!-- 再次输入密码验证 -->
+
+        <com.sssoft.Yundian.view.ClearEditText
+            android:id="@+id/et_re_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/UI_spacing5"     
+            android:drawableLeft="@drawable/ic_re_password"
+            android:drawablePadding="@dimen/UI_spacing10"
+            android:hint="@string/re_input_password"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/UI_spacing40"
+        android:layout_below="@+id/ll_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_background"
+        android:text="注册"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/UI_text_middle" />
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bt_register"
+        android:layout_below="@+id/bt_register"
+        android:layout_marginTop="14dp"
+        android:text="已有账号! 立即登陆"
+        android:textColor="@color/UI_text_gray"
+        android:textSize="@dimen/UI_text_small" />
+
+</RelativeLayout>

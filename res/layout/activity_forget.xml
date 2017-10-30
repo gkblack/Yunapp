@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sssoft.Yundian.activity.ForgetActivity" >
+
+    <!-- 重置密码界面布局 -->
+
+    <RelativeLayout
+        android:id="@+id/Top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/top_bg"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/back" />
+
+        <ImageView
+            android:id="@+id/tv_line"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_toRightOf="@id/iv_back"
+            android:layout_toEndOf="@id/iv_back"
+            android:background="@drawable/ic_vertical_line" />
+
+        <TextView
+            android:id="@+id/TV_Income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="重置密码"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Top"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/UI_spacing40"
+        android:layout_marginRight="@dimen/UI_spacing40"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <com.sssoft.Yundian.view.ClearEditText
+                android:id="@+id/et_register_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/phone"
+                android:drawablePadding="@dimen/UI_spacing10"
+                android:hint="填写手机号"
+                android:maxLength="11"
+                android:numeric="integer"
+                android:textColor="@color/UI_text_black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_securitycode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_register_phone"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_input_verification_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:drawableLeft="@drawable/ic_message_code"
+                android:drawablePadding="@dimen/UI_spacing10"
+                android:hint="短信验证码"
+                android:maxLength="6"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/bt_verification_code"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/UI_spacing40"
+                android:background="@drawable/btn_background"
+                android:text="获取验证码"               
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/UI_text_middle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_securitycode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <com.sssoft.Yundian.view.ClearEditText
+                android:id="@+id/et_newpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/pwd"
+                android:drawablePadding="@dimen/UI_spacing10"
+                android:hint="@string/login_password"
+                android:maxLength="16"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="@dimen/UI_text_middle"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_register"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/UI_spacing40"
+            android:layout_below="@+id/ll_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_background"
+            android:text="提交"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/UI_text_middle" />
+    </LinearLayout>
+
+</RelativeLayout>
